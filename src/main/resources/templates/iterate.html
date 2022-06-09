@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterate</title>
+</head>
+<body>
+ <h1> element iterate</h1>
+<span th:text="${list}"></span>
+<ul>
+    <li th:each="name,n:${list}">
+        <label th:text="${n.size}+'  '+${name}" th:style="'color:Red'"></label><br>
+        <label  th:text="${n.count}+'  '+${name}" th:style="${n.even}? 'color:blue' : 'font-weight:bold;color:yellow'"></label>
+    </li>
+
+</ul>
+</body>
+</html>

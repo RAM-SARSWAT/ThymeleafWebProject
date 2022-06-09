@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>conditional</title>
+</head>
+<body>
+<h1> Evils operator</h1><br>
+<h1 th:style="${isActive} ? 'color:green':'color:red'"> User is <label th:text="${isActive} ? 'Active':'Inactive'"></label></h1><br>
+<h1 th:style="${isInactive} ? 'color:green':'color:red'"> User is <label th:text="${isInactive} ? 'Active':'Inactive'"></label></h1>
+<h1> if-unless</h1><br>
+<h1 th:if="${gender}=='M'" th:style="'background-color: blue'">
+Male
+</h1>
+<h1 th:unless="${gender}=='M'" th:style="'background-color: #59ff00'">
+    Female
+</h1>
+<h1> switch case</h1><br>
+<div th:switch="${#lists.size(name)}">
+    <h1 th:case="'0'">Empty List</h1>
+    <h1 th:case="'1'">List contain 1 element</h1>
+    <h1 th:case="'2'">List contain 2 element</h1>
+    <h1 th:case="'3'">List contain 3 element</h1>
+    <h1 th:case="'4'">List contain 4 element</h1>
+</div>
+<h1 th:text="${name}"></h1>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1>thymeleaf</h1>
+<label> Name of Owner  <span th:text="${#strings.toUpperCase(name)}" th:style="'color: green'"></span></label><br>
+<label> length of name  <span th:text="${#strings.length(name)}" th:style="'color: green'"></span></label><br>
+<label> Name of Owner  <span th:text="${#strings.toUpperCase(name)}" th:style="'color: red'"></span></label><br>
+<label> Current Date :<span th:text="${date}" th:style="'color: blue'"></span></label>
+
+<div th:with="a=10,b=14">
+    <h1 > sum of <span th:text="${a}"></span> and <span th:text="${b}"></span> is <span th:text="${a+b}" th:style="'color:#59ff00'"></span></h1>
+</div>
+</body>
+</html>

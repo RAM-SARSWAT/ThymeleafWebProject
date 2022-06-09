@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>fragment</title>
+</head>
+<body>
+<h1> Service Page.</h1>
+<footer id="ram" th:insert="footer::footer1(${title},${subTitle})">
+</footer>
+<h1>service footer</h1>
+</body>
+</html>
